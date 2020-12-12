@@ -18,10 +18,7 @@ function Start() {
         />
         {/*Facebook*/}
         <meta property="og:url" content="https://lablog.net/#/start" />
-        <meta
-          property="og:title"
-          content="开始使用 - Eicon - 字体图标库"
-        />
+        <meta property="og:title" content="开始使用 - Eicon - 字体图标库" />
         <meta
           property="og:keywords"
           content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
@@ -36,7 +33,7 @@ function Start() {
       </Helmet>
       <header className="App-header">
         <h1>
-        开始使用Eicon - 如何使用Eicon图标库
+          开始使用Eicon - 如何使用Eicon图标库
           <svg
             t="1607770331588"
             className="icon"
@@ -112,7 +109,11 @@ function Start() {
         <hr />
         <h3>
           方法二：下载
-          <a href="https://eicon.lablog.net/v1.eicon.main.css" target="_blank" rel="noreferrer">
+          <a
+            href="https://eicon.lablog.net/v1.eicon.main.css"
+            target="_blank"
+            rel="noreferrer"
+          >
             css文件
           </a>
           至本地
@@ -225,7 +226,7 @@ function Start() {
         <h2>
           <svg
             t="1607783980611"
-            class="icon"
+            className="icon"
             viewBox="0 0 1024 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -260,8 +261,58 @@ function Start() {
         <Highlight className="html">
           {`<span className="eicon eiconconsole"></span>">`}
         </Highlight>
-        <p className="h3">效果如下：</p>
-        <span className="eicon eiconconsole"></span>
+        <p className="h3">
+          效果如下：
+          <span className="eicon eiconconsole"></span>
+        </p>
+        <div className="progress" style={{ marginTop: "10px" }}>
+          <div
+            className="progress-bar progress-bar-striped bg-warning"
+            role="progressbar"
+            style={{ width: "100%" }}
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <h2>
+          <svg
+            t="1607785819669"
+            className="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="4154"
+            width="100"
+            height="100"
+          >
+            <path
+              d="M512 0h426.666667v1024l-426.666667-256-426.666667 256V0h426.666667z"
+              fill="#B5B5B5"
+              p-id="4155"
+            ></path>
+            <path
+              d="M512 768L85.333333 1024V0h426.666667v768z"
+              fill="#C3C3C3"
+              p-id="4156"
+            ></path>
+            <path
+              d="M612.693333 549.205333h-27.136V597.333333H505.685333v-48.128h-151.04V469.333333l120.832-236.544h92.16L446.805333 469.333333h58.88V421.205333h79.872V469.333333h27.136z"
+              fill="#FFFFFF"
+              p-id="4157"
+            ></path>
+          </svg>
+          第四步-调整图标大小
+        </h2>
+        <p className="h3">通过设置CSS的font-size属性可以调整图标大小，如下所示：</p>
+        <Highlight className="html">
+          {`<span className="eicon eiconhome" style="font-size: xx-large;"></span>
+<span className="eicon eiconhome" style="font-size: medium;"></span>
+<span className="eicon eiconhome" style="font-size: xx-small;"></span>`}
+        </Highlight>
+        <span className="eicon eiconhome" style={{fontSize: 'xx-large'}} />
+        <span className="eicon eiconhome" style={{fontSize: 'medium'}} />
+        <span className="eicon eiconhome" style={{fontSize: 'xx-small'}} />
         <hr />
       </div>
     </div>
