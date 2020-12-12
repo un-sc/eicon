@@ -15,12 +15,12 @@ function App() {
           name="description"
           content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
         />
+        {/*Facebook*/}
+        <meta property="og:url" content="https://lablog.net/" />
         <meta
           property="og:title"
-          content="如何给网页引用ttf字体文件 - 联安博客网"
+          content="Eicon - 字体图标库"
         />
-        <meta property="og:url" content="https://lablog.net/" />
-        <meta property="og:image" content={logo} />
         <meta
           property="og:keywords"
           content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
@@ -30,7 +30,8 @@ function App() {
           content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="联安博客网 - 门户首页" />
+        <meta property="og:image" content={logo} />
+        <meta property="og:site_name" content="Eicon - 字体图标库" />
       </Helmet>
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}

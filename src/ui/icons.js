@@ -1,8 +1,39 @@
 import "./cube.main.css";
+import { Helmet } from "react-helmet";
+import logo from "./logo.svg";
 
 function Icons() {
   return (
     <div>
+      <Helmet>
+        <title>图标库 - Eicon - 字体图标库</title>
+        <meta
+          name="keywords"
+          content="Eicon,图标列表,图标库,图标,Eicon图标库"
+        />
+        <meta
+          name="description"
+          content="Eicon,图标列表,图标库,图标,Eicon图标库"
+        />
+        {/*Facebook*/}
+        <meta property="og:url" content="https://lablog.net/#/icons" />
+        <meta property="og:title" content="图标库 - Eicon - 字体图标库" />
+        <meta
+          property="og:keywords"
+          content="Eicon,图标列表,图标库,图标,Eicon图标库"
+        />
+        <meta
+          property="og:description"
+          content="Eicon,图标列表,图标库,图标,Eicon图标库"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={logo} />
+        <meta property="og:site_name" content="图标库 - Eicon - 字体图标库" />
+      </Helmet>
+      <header className="App-header">
+        <h1>图标库-图标列表</h1>
+        <h3>共计729个图标</h3>
+      </header>
       <div className="content font-class">
         <ul className="icon_lists dib-box">
           <li className="dib">

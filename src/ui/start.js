@@ -1,12 +1,42 @@
 import Highlight from "react-highlight";
 import "highlight.js/styles/zenburn.css";
+import { Helmet } from "react-helmet";
+import logo from "./logo.svg";
 
 function Start() {
   return (
     <div className="App">
+      <Helmet>
+        <title>开始使用 - Eicon - 字体图标库</title>
+        <meta
+          name="keywords"
+          content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
+        />
+        <meta
+          name="description"
+          content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
+        />
+        {/*Facebook*/}
+        <meta property="og:url" content="https://lablog.net/#/start" />
+        <meta
+          property="og:title"
+          content="开始使用 - Eicon - 字体图标库"
+        />
+        <meta
+          property="og:keywords"
+          content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
+        />
+        <meta
+          property="og:description"
+          content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={logo} />
+        <meta property="og:site_name" content="开始使用 - Eicon - 字体图标库" />
+      </Helmet>
       <header className="App-header">
         <h1>
-          如何使用Eicon图标库
+        开始使用Eicon - 如何使用Eicon图标库
           <svg
             t="1607770331588"
             className="icon"
@@ -36,6 +66,16 @@ function Start() {
         ></div>
       </div>
       <div className="container">
+        <div className="progress" style={{ marginTop: "10px" }}>
+          <div
+            className="progress-bar progress-bar-striped bg-warning"
+            role="progressbar"
+            style={{ width: "100%" }}
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
         <h2>
           <svg
             t="1607770785942"
@@ -63,112 +103,22 @@ function Start() {
               p-id="26344"
             ></path>
           </svg>
-          方法1-仅需简单3步
+          第一步-引用CSS文件
         </h2>
-        <div className="progress">
-          <div
-            className="progress-bar progress-bar-striped bg-info"
-            role="progressbar"
-            style={{ width: "100%" }}
-            aria-valuenow="100"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <h3>1.在网页中引入css</h3>
+        <h3>方法一：使用Eicon CDN</h3>
         <Highlight className="html">
           {`<link rel="stylesheet" href="https://eicon.lablog.net/v1.eicon.main.css">`}
         </Highlight>
-        <h3>2.挑选图标</h3>
-        <p>
-          前往<a href="/#/icons">图标库</a>挑选所需要的图标，找到对应的图标类名
-          <br />
-          每个图标下第二行就是图标的类名。
-        </p>
-        <h3>3.使用图标</h3>
-        <Highlight className="html">
-          {`<!--将xxx替换为图标类名即可-->
-<span className="eicon xxx"></span>`}
-        </Highlight>
         <hr />
-        <h3>使用举例</h3>
-        <Highlight className="html">
-          {`<span className="eicon eiconconsole"></span>">`}
-        </Highlight>
-        <h5>效果如下：</h5>
-        <span className="eicon eiconconsole"></span>
-        <hr />
-        <div className="progress">
-          <div
-            className="progress-bar progress-bar-striped bg-warning"
-            role="progressbar"
-            style={{ width: "100%" }}
-            aria-valuenow="100"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <div className="progress">
-          <div
-            className="progress-bar progress-bar-striped bg-warning"
-            role="progressbar"
-            style={{ width: "100%" }}
-            aria-valuenow="100"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
-        <h2>
-          <svg
-            t="1607770856252"
-            className="icon"
-            viewBox="0 0 1024 1024"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            p-id="27465"
-            width="100"
-            height="100"
-          >
-            <path
-              d="M520.217284 0h426.666667v1024l-426.666667-256L93.550617 1024V0h426.666667z m0 0"
-              fill="#CDCBCE"
-              p-id="27466"
-              data-spm-anchor-id="a313x.7781069.0.i7"
-              className=""
-            ></path>
-            <path
-              d="M520.217284 768L93.550617 1024V0h426.666667v768z m0 0"
-              fill="#E6E3E6"
-              p-id="27467"
-              data-spm-anchor-id="a313x.7781069.0.i8"
-              className="selected"
-            ></path>
-            <path
-              d="M611.239506 597.333333H376.730864v-75.851852l132.108642-143.486419c13.274074-14.538272 18.330864-23.387654 18.330864-39.190124 0-20.22716-11.377778-33.501235-32.869135-33.501234-15.17037 0-33.501235 6.953086-33.501235 35.397531H376.730864c0-71.42716 54.360494-111.249383 117.570371-111.249383 67.634568 0 116.938272 41.718519 116.938271 109.985185 0 38.558025-15.802469 58.785185-44.879012 89.758025L479.130864 521.481481h132.108642v75.851852z m0 0"
-              fill="#333333"
-              p-id="27468"
-            ></path>
-          </svg>
-          方法2-下载css文件至本地
-        </h2>
-        <div className="progress">
-          <div
-            className="progress-bar progress-bar-striped bg-info"
-            role="progressbar"
-            style={{ width: "100%" }}
-            aria-valuenow="100"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
         <h3>
-          1.点击下方按钮下载
-          <a href="https://eicon.lablog.net/v1.eicon.main.css" target="_blank">
-            v1.Eicon.main.css
+          方法二：下载
+          <a href="https://eicon.lablog.net/v1.eicon.main.css" target="_blank" rel="noreferrer">
+            css文件
           </a>
+          至本地
         </h3>
         <a
-          style={{ width: "300px", height: "40px" }}
+          style={{ width: "300px", height: "40px", marginBottom: "10px" }}
           href="https://eiconcdn.oss-cn-beijing.aliyuncs.com/v1.eicon.main.zip"
           className="btn btn-primary btn-lg active"
           role="button"
@@ -211,21 +161,108 @@ function Start() {
           </svg>
           Download Eicon-1.0
         </a>
-        <h3>2.在网页中引入css</h3>
         <Highlight className="html">
           {`<link rel="stylesheet" href="css/v1.eicon.main.css">`}
         </Highlight>
-        <h3>3.挑选图标</h3>
-        <p>
+        <div className="progress" style={{ marginTop: "10px" }}>
+          <div
+            className="progress-bar progress-bar-striped bg-warning"
+            role="progressbar"
+            style={{ width: "100%" }}
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <h2>
+          <svg
+            t="1607770856252"
+            className="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="27465"
+            width="100"
+            height="100"
+          >
+            <path
+              d="M520.217284 0h426.666667v1024l-426.666667-256L93.550617 1024V0h426.666667z m0 0"
+              fill="#CDCBCE"
+              p-id="27466"
+              data-spm-anchor-id="a313x.7781069.0.i7"
+              className=""
+            ></path>
+            <path
+              d="M520.217284 768L93.550617 1024V0h426.666667v768z m0 0"
+              fill="#E6E3E6"
+              p-id="27467"
+              data-spm-anchor-id="a313x.7781069.0.i8"
+              className="selected"
+            ></path>
+            <path
+              d="M611.239506 597.333333H376.730864v-75.851852l132.108642-143.486419c13.274074-14.538272 18.330864-23.387654 18.330864-39.190124 0-20.22716-11.377778-33.501235-32.869135-33.501234-15.17037 0-33.501235 6.953086-33.501235 35.397531H376.730864c0-71.42716 54.360494-111.249383 117.570371-111.249383 67.634568 0 116.938272 41.718519 116.938271 109.985185 0 38.558025-15.802469 58.785185-44.879012 89.758025L479.130864 521.481481h132.108642v75.851852z m0 0"
+              fill="#333333"
+              p-id="27468"
+            ></path>
+          </svg>
+          第二步-挑选图标
+        </h2>
+        <p className="h3">
           前往<a href="/#/icons">图标库</a>挑选所需要的图标，找到对应的图标类名
           <br />
-          每个图标下第二行就是图标的类名。
+          每个图标下<b>第二行</b>就是图标的类名。
         </p>
-        <h3>4.使用图标</h3>
+        <div className="progress" style={{ marginTop: "10px" }}>
+          <div
+            className="progress-bar progress-bar-striped bg-warning"
+            role="progressbar"
+            style={{ width: "100%" }}
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <h2>
+          <svg
+            t="1607783980611"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="3250"
+            width="100"
+            height="100"
+          >
+            <path
+              d="M512 0h426.666667v1024l-426.666667-256-426.666667 256V0h426.666667z"
+              fill="#FFAC4A"
+              p-id="3251"
+            ></path>
+            <path
+              d="M512 768L85.333333 1024V0h426.666667v768z"
+              fill="#FFBC6E"
+              p-id="3252"
+            ></path>
+            <path
+              d="M605.525333 488.277333c0 76.288-57.344 112.128-121.344 112.128-60.416 0-121.344-32.256-121.344-114.176h83.968c0 25.6 16.384 38.4 37.376 38.4 22.016 0 37.376-12.8 37.376-38.912 0-22.016-16.384-38.4-38.912-38.4h-11.776V374.613333h11.776c25.088 0 34.816-17.92 34.816-34.304 0-23.04-15.872-34.816-33.28-34.816-17.408 0-33.28 12.288-33.28 34.304H366.933333c0-68.608 52.224-110.08 117.248-110.08 67.584 0 117.248 45.056 117.248 108.032 0 39.936-19.456 59.392-37.888 71.168 19.968 13.824 41.984 35.84 41.984 79.36z"
+              fill="#FFFFFF"
+              p-id="3253"
+            ></path>
+          </svg>
+          第三步-引用图标
+        </h2>
         <Highlight className="html">
           {`<!--将xxx替换为图标类名即可-->
 <span className="eicon xxx"></span>`}
         </Highlight>
+        <hr />
+        <p className="h3">使用举例：</p>
+        <Highlight className="html">
+          {`<span className="eicon eiconconsole"></span>">`}
+        </Highlight>
+        <p className="h3">效果如下：</p>
+        <span className="eicon eiconconsole"></span>
+        <hr />
       </div>
     </div>
   );
