@@ -5,7 +5,7 @@ function Menu() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -13,7 +13,7 @@ function Menu() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
           Menu
         </button>
         <a className="navbar-brand" href="/" style={{ fontSize: "larger" }}>

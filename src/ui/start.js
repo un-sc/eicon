@@ -9,7 +9,7 @@ function Start() {
           如何使用Eicon图标库
           <svg
             t="1607770331588"
-            class="icon"
+            className="icon"
             viewBox="0 0 1024 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function Start() {
         <h2>
           <svg
             t="1607770785942"
-            class="icon"
+            className="icon"
             viewBox="0 0 1024 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ function Start() {
         <h2>
           <svg
             t="1607770856252"
-            class="icon"
+            className="icon"
             viewBox="0 0 1024 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -134,14 +134,14 @@ function Start() {
               fill="#CDCBCE"
               p-id="27466"
               data-spm-anchor-id="a313x.7781069.0.i7"
-              class=""
+              className=""
             ></path>
             <path
               d="M520.217284 768L93.550617 1024V0h426.666667v768z m0 0"
               fill="#E6E3E6"
               p-id="27467"
               data-spm-anchor-id="a313x.7781069.0.i8"
-              class="selected"
+              className="selected"
             ></path>
             <path
               d="M611.239506 597.333333H376.730864v-75.851852l132.108642-143.486419c13.274074-14.538272 18.330864-23.387654 18.330864-39.190124 0-20.22716-11.377778-33.501235-32.869135-33.501234-15.17037 0-33.501235 6.953086-33.501235 35.397531H376.730864c0-71.42716 54.360494-111.249383 117.570371-111.249383 67.634568 0 116.938272 41.718519 116.938271 109.985185 0 38.558025-15.802469 58.785185-44.879012 89.758025L479.130864 521.481481h132.108642v75.851852z m0 0"
@@ -170,13 +170,13 @@ function Start() {
         <a
           style={{ width: "300px", height: "40px" }}
           href="https://eiconcdn.oss-cn-beijing.aliyuncs.com/v1.eicon.main.zip"
-          class="btn btn-primary btn-lg active"
+          className="btn btn-primary btn-lg active"
           role="button"
           aria-pressed="true"
         >
           <svg
             t="1607771863106"
-            class="icon"
+            className="icon"
             viewBox="0 0 1025 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
