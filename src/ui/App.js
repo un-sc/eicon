@@ -17,10 +17,7 @@ function App() {
         />
         {/*Facebook*/}
         <meta property="og:url" content="https://lablog.net/" />
-        <meta
-          property="og:title"
-          content="Eicon - 字体图标库"
-        />
+        <meta property="og:title" content="Eicon - 字体图标库" />
         <meta
           property="og:keywords"
           content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
@@ -35,11 +32,11 @@ function App() {
       </Helmet>
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h1>Eicon - 高效·快捷·轻量的图标库</h1>
-        <h4>代码随时复制 · 使用更加方便</h4>
-        <a className="btn btn-primary btn-lg" href="/#/start">
-          开始使用
-        </a>
+            <h1>Eicon - 高效·快捷·轻量的图标库</h1>
+            <h4>代码随时复制 · 使用更加方便</h4>
+            <a className="btn btn-primary btn-lg" href="/#/start">
+              开始使用
+            </a>
       </header>
       <div className="progress">
         <div
@@ -182,6 +179,7 @@ function App() {
           标签的class属性来指定图标，书写直观，语义明确，无需繁琐的代码。在更改图标时也仅需更改class属性，使图标库具有较高的灵活性。除此之外，图标库不需要JavaScript支持，因此您无需担忧js方面对于不同浏览器的兼容问题。本图标库支持
           IE8+，及所有现代浏览器。
         </p>
+        <iframe src="/#/list" title="图标列表" style={{width:"100%"}}></iframe>
       </div>
     </div>
   );

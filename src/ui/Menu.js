@@ -44,6 +44,11 @@ function Menu() {
                 图标库
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#/about">
+                关于
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

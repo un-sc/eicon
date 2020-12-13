@@ -6,7 +6,9 @@ import Menu from "./ui/Menu";
 import Footer from "./ui/Footer";
 import App from "./ui/App";
 import Icons from "./ui/icons";
+import Iconlist from "./ui/iconlist";
 import Start from "./ui/start";
+import About from "./ui/about";
 import reportWebVitals from "./reportWebVitals";
 
 window.React = React;
@@ -42,7 +44,26 @@ ReactDOM.render(
             <div>
               <Menu />
               <Icons />
+              <Iconlist />
               <Footer />
+            </div>
+          )}
+        />
+        <Route
+          path="/about"
+          component={() => (
+            <div>
+              <Menu />
+              <About />
+              <Footer />
+            </div>
+          )}
+        />
+        <Route
+          path="/list"
+          component={() => (
+            <div>
+              <Iconlist />
             </div>
           )}
         />
