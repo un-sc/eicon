@@ -25,7 +25,7 @@ function Menu() {
             alt=""
             loading="lazy"
           />
-          Eicon
+          <b>Eicon</b>
         </a>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">

@@ -259,7 +259,7 @@ function Start() {
         <hr />
         <p className="h3">使用举例：</p>
         <Highlight className="html">
-          {`<span className="eicon eiconconsole"></span>">`}
+          {`<span className="eicon eiconconsole"></span>  `}
         </Highlight>
         <p className="h3">
           效果如下：
