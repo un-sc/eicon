@@ -16,7 +16,7 @@ function About() {
         />
         {/*Facebook*/}
         <meta property="og:url" content="https://lablog.net/#/start" />
-        <meta property="og:title" content="开始使用 - Eicon - 字体图标库" />
+        <meta property="og:title" content="关于 - Eicon - 字体图标库" />
         <meta
           property="og:keywords"
           content="Eicon,关于,图标库,图标,矢量图标,网页图标,Eicon图标库"
@@ -27,7 +27,7 @@ function About() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={logo} />
-        <meta property="og:site_name" content="开始使用 - Eicon - 字体图标库" />
+        <meta property="og:site_name" content="关于 - Eicon - 字体图标库" />
       </Helmet>
       <header className="App-header">
         <h1>
