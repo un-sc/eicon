@@ -3,7 +3,9 @@ import "./App.css";
 import { Helmet } from "react-helmet";
 import "antd/dist/antd.css";
 import { Tabs } from 'antd';
+import { Card } from 'antd';
 const { TabPane } = Tabs;
+const { Meta } = Card;
 function callback(key) {
   console.log(key);
 }
@@ -69,8 +71,10 @@ function App() {
         <hr />
         <h3>为何使用Eicon图标库</h3>
         <div className="row">
-          <div className="card" style={{ width: "20rem", textAlign: "center" }}>
-            <div className="card-img-top">
+          <Card
+            hoverable
+            style={{ width: 260 }}
+            cover={
               <svg
                 t="1607699769113"
                 className="icon"
@@ -86,17 +90,14 @@ function App() {
                   p-id="8617"
                 ></path>
               </svg>
-            </div>
-            <div className="card-body">
-              <h4 className="card-title">一套字库, 729个图标</h4>
-              <p className="card-text">
-                图标丰富多样，适用于各行各业，一套图标库解决所有图标需求问题。
-              </p>
-            </div>
-          </div>
-
-          <div className="card" style={{ width: "20rem", textAlign: "center" }}>
-            <div className="card-img-top">
+            }
+          >
+            <Meta title="一套字库, 729个图标" description="图标丰富多样，适用于各行各业，一套图标库解决所有图标需求问题。" />
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 260 }}
+            cover={
               <svg
                 t="1607700127490"
                 className="icon"
@@ -112,17 +113,14 @@ function App() {
                   p-id="8762"
                 ></path>
               </svg>
-            </div>
-            <div className="card-body">
-              <h4 className="card-title">无限放大或缩小</h4>
-              <p className="card-text">
-                可缩放的矢量图标，每个图标在放大或者缩小的时候看起来都正常。
-              </p>
-            </div>
-          </div>
-
-          <div className="card" style={{ width: "20rem", textAlign: "center" }}>
-            <div className="card-img-top">
+            }
+          >
+            <Meta title="无限放大或缩小" description="可缩放的矢量图标，每个图标在放大或者缩小的时候看起来都正常。" />
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 260 }}
+            cover={
               <svg
                 t="1607702989647"
                 className="icon"
@@ -144,17 +142,14 @@ function App() {
                   p-id="7479"
                 ></path>
               </svg>
-            </div>
-            <div className="card-body">
-              <h4 className="card-title">轻量简便</h4>
-              <p className="card-text">
-                使用本图标库无需繁琐的代码，使图标以简介的代码呈现在网页上。
-              </p>
-            </div>
-          </div>
-
-          <div className="card" style={{ width: "20rem", textAlign: "center" }}>
-            <div className="card-img-top">
+            }
+          >
+            <Meta title="轻量简便" description="使用本图标库无需繁琐的代码，使图标以简介的代码呈现在网页上。" />
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 260 }}
+            cover={
               <svg
                 t="1607728979529"
                 className="icon"
@@ -170,14 +165,10 @@ function App() {
                   p-id="22598"
                 ></path>
               </svg>
-            </div>
-            <div className="card-body">
-              <h4 className="card-title">无需JavaScript支持</h4>
-              <p className="card-text">
-                使用本图标库无需JavaScript支持，因此您无需担忧js方面对于不同浏览器的兼容问题。
-              </p>
-            </div>
-          </div>
+            }
+          >
+            <Meta title="无需JavaScript支持" description="使用本图标库无需JavaScript支持，因此您无需担忧js方面对于不同浏览器的兼容问题。" />
+          </Card>
         </div>
         <div className="progress" style={{ marginTop: "30px" }}>
           <div
@@ -205,3 +196,12 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+// ReactDOM.render(
+//   ,
+//   mountNode,
+// );
