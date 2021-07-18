@@ -97,7 +97,7 @@ function Icons() {
           aria-valuemax="100"
         ></div>
       </div>
-      </div>
+    </div>
   );
 }
 export default Icons;
