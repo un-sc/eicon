@@ -1,6 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Helmet } from "react-helmet";
+import "antd/dist/antd.css";
+import { Tabs } from 'antd';
+const { TabPane } = Tabs;
+function callback(key) {
+  console.log(key);
+}
 
 function App() {
   return (
@@ -184,12 +190,14 @@ function App() {
           ></div>
         </div>
         <h3>关于Eicon图标库</h3>
-        <p>
-          Eicon是一款免费的图标库，且拥有着729个图标。本图标库的设计初衷就是让大家更加方便的使用网页图标，使图标灵活的展现在网页上。本图标库所有图标都是svg矢量图标，可以自由放大或缩小并保证清晰度。同时，本图标库通过
-          <code>&lt;span&gt;</code>
-          标签的class属性来指定图标，书写直观，语义明确，无需繁琐的代码。在更改图标时也仅需更改class属性，使图标库具有较高的灵活性。除此之外，图标库不需要JavaScript支持，因此您无需担忧js方面对于不同浏览器的兼容问题。本图标库支持
-          IE8+，及所有现代浏览器。
-        </p>
+        <Tabs defaultActiveKey="1" onChange={callback}>
+          <TabPane tab="中文" key="1">
+            Eicon是一款免费的图标库，并且拥有着729个图标。本图标库的设计初衷就是让大家更加方便地使用网页图标，使图标灵活地展现在网页上。本图标库所有图标都是svg矢量图标，可以自由放大或缩小并保证清晰度。同时，本图标库通过<code>&lt;span&gt;</code>标签的class属性来指定图标，书写直观，语义明确，无需繁琐的代码。在更改图标时也仅需更改class属性，使图标库具有较高的灵活性。除此之外，图标库不需要JavaScript支持，因此您无需担忧js方面对于不同浏览器的兼容问题。本图标库支持 IE8+，及所有现代浏览器。
+          </TabPane>
+          <TabPane tab="English" key="2">
+            Eicon is a free icon library with 729 icons. The original design of this icon library is to make it more convenient to use the icons on the web pages, so that the icons are flexibly displayed on the web pages. All icons in this icon gallery are svg vector icons, which can be enlarged or shrunk freely to ensure clarity. At the same time, the icon library through the class attribute of the "span" tag to specify the icon, writing intuitive, semantically clear, no tedious code. You also only need to change the class attribute when changing icons, making the icon library more flexible. In addition, the icon library doesn't require JavaScript support, so you don't have to worry about compatibility with different browsers for javascript. This icon library supports IE8 +, and all modern browsers.
+          </TabPane>
+        </Tabs>
         <iframe src="/#/list" title="图标列表" style={{ width: "100%" }}></iframe>
       </div>
     </div>
