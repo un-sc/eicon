@@ -18,7 +18,7 @@ function Footer() {
           <b>Eicon</b>
         </a>
         <p className="nav-item nav-link active">
-          © 2020 <a href="/">Eicon</a>. All Rights Reserved.
+          © 2020-2021 <a href="/">Eicon</a>. All Rights Reserved.
         </p>
       </nav>
     </div>

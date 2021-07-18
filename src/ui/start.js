@@ -16,20 +16,31 @@ function Start() {
           name="description"
           content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
         />
+        {/*Twitter*/}
+        <meta name='twitter:card' content='开始使用 - Eicon - 高效·快捷·轻量的图标库' />
+        <meta name='twitter:site' content='开始使用 - Eicon - 字体图标库' />
+        <meta name="twitter:url" content="https://www.eiconfont.com/#/start" />
+        <meta name='twitter:title' content='开始使用 - Eicon - 字体图标库' />
+        <meta name='twitter:image' content={logo} />
+        <meta name='twitter:description' content='开始使用 - Eicon - 高效·快捷·轻量的图标库' />
         {/*Facebook*/}
-        <meta property="og:url" content="https://lablog.net/#/start" />
+        <meta property="og:url" content="https://www.eiconfont.com/#/start" />
         <meta property="og:title" content="开始使用 - Eicon - 字体图标库" />
         <meta
           property="og:keywords"
-          content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
+          content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
         />
         <meta
           property="og:description"
-          content="Eicon,开始使用,图标库,图标,矢量图标,网页图标,Eicon图标库"
+          content="开始使用 - Eicon - 高效·快捷·轻量的图标库"
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={logo} />
         <meta property="og:site_name" content="开始使用 - Eicon - 字体图标库" />
+        {/* {QQ} */}
+        <meta itemprop="name" content="开始使用 - Eicon - 字体图标库" />
+        <meta itemprop="image" content={logo} />
+        <meta name="description" itemprop="description" content="开始使用 - Eicon - 高效·快捷·轻量的图标库" />
       </Helmet>
       <header className="App-header">
         <h1>

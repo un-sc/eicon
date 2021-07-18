@@ -15,8 +15,15 @@ function App() {
           name="description"
           content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
         />
+        {/*Twitter*/}
+        <meta name='twitter:card' content='Eicon - 高效·快捷·轻量的图标库' />
+        <meta name='twitter:site' content='Eicon - 字体图标库' />
+        <meta name="twitter:url" content="https://www.eiconfont.com" />
+        <meta name='twitter:title' content='Eicon - 字体图标库' />
+        <meta name='twitter:image' content={logo} />
+        <meta name='twitter:description' content='Eicon - 高效·快捷·轻量的图标库' />
         {/*Facebook*/}
-        <meta property="og:url" content="https://lablog.net/" />
+        <meta property="og:url" content="https://www.eiconfont.com" />
         <meta property="og:title" content="Eicon - 字体图标库" />
         <meta
           property="og:keywords"
@@ -24,19 +31,23 @@ function App() {
         />
         <meta
           property="og:description"
-          content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
+          content="Eicon - 高效·快捷·轻量的图标库"
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={logo} />
         <meta property="og:site_name" content="Eicon - 字体图标库" />
+        {/* {QQ} */}
+        <meta itemprop="name" content="Eicon - 字体图标库" />
+        <meta itemprop="image" content={logo} />
+        <meta name="description" itemprop="description" content="Eicon - 高效·快捷·轻量的图标库" />
       </Helmet>
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <h1>Eicon - 高效·快捷·轻量的图标库</h1>
-            <h4>代码随时复制 · 使用更加方便</h4>
-            <a className="btn btn-primary btn-lg" href="/#/start">
-              开始使用
-            </a>
+        <h1>Eicon - 高效·快捷·轻量的图标库</h1>
+        <h4>代码随时复制 · 使用更加方便</h4>
+        <a className="btn btn-primary btn-lg" href="/#/start">
+          开始使用
+        </a>
       </header>
       <div className="progress">
         <div
@@ -179,7 +190,7 @@ function App() {
           标签的class属性来指定图标，书写直观，语义明确，无需繁琐的代码。在更改图标时也仅需更改class属性，使图标库具有较高的灵活性。除此之外，图标库不需要JavaScript支持，因此您无需担忧js方面对于不同浏览器的兼容问题。本图标库支持
           IE8+，及所有现代浏览器。
         </p>
-        <iframe src="/#/list" title="图标列表" style={{width:"100%"}}></iframe>
+        <iframe src="/#/list" title="图标列表" style={{ width: "100%" }}></iframe>
       </div>
     </div>
   );

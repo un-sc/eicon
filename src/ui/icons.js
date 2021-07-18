@@ -15,20 +15,31 @@ function Icons() {
           name="description"
           content="Eicon,图标列表,图标库,图标,Eicon图标库"
         />
+        {/*Twitter*/}
+        <meta name='twitter:card' content='图标库 - Eicon - 高效·快捷·轻量的图标库' />
+        <meta name='twitter:site' content='图标库 - Eicon - 字体图标库' />
+        <meta name="twitter:url" content="https://www.eiconfont.com/#/icons" />
+        <meta name='twitter:title' content='图标库 - Eicon - 字体图标库' />
+        <meta name='twitter:image' content={logo} />
+        <meta name='twitter:description' content='图标库 - Eicon - 高效·快捷·轻量的图标库' />
         {/*Facebook*/}
-        <meta property="og:url" content="https://lablog.net/#/icons" />
+        <meta property="og:url" content="https://www.eiconfont.com/#/icons" />
         <meta property="og:title" content="图标库 - Eicon - 字体图标库" />
         <meta
           property="og:keywords"
-          content="Eicon,图标列表,图标库,图标,Eicon图标库"
+          content="Eicon,图标库,矢量图标,网页图标,Eicon图标库"
         />
         <meta
           property="og:description"
-          content="Eicon,图标列表,图标库,图标,Eicon图标库"
+          content="图标库 - Eicon - 高效·快捷·轻量的图标库"
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={logo} />
         <meta property="og:site_name" content="图标库 - Eicon - 字体图标库" />
+        {/* {QQ} */}
+        <meta itemprop="name" content="图标库 - Eicon - 字体图标库" />
+        <meta itemprop="image" content={logo} />
+        <meta name="description" itemprop="description" content="图标库 - Eicon - 高效·快捷·轻量的图标库" />
       </Helmet>
       <header className="App-header">
         <h1>
