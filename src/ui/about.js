@@ -84,7 +84,7 @@ function About() {
         <p>EiconFont由联安于2020年开发。</p>
         <h2>联系我们</h2>
         <p>email：2779799659@qq.com<br />
-          twitter：<a href="https://twitter.com/shangqingge" target="_blank">@shangqingge</a><br />
+          twitter：<a href="https://twitter.com/shangqingge" target="_blank" rel="noreferrer">@shangqingge</a><br />
           QQ：2779799659
         </p>
         {/* <form
