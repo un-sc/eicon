@@ -81,17 +81,13 @@ function About() {
           IE8+，及所有现代浏览器。
         </p>
         <h2>创始人</h2>
-        <p>Eicon由上清阁团队开发，创始人是联安。</p>
-        <h2>致谢</h2>
-        <p>
-          本图标库部分图标来源于
-          <a href="https://www.iconfont.cn/" target="_blank" rel="noreferrer">
-            阿里巴巴IconFont平台
-          </a>
-          ，感谢其提供的图标！如有侵权，联系删除。
-        </p>
+        <p>EiconFont由联安于2020年开发。</p>
         <h2>联系我们</h2>
-        <form
+        <p>email：2779799659@qq.com<br />
+          twitter：<a href="https://twitter.com/shangqingge" target="_blank">@shangqingge</a><br />
+          QQ：2779799659
+        </p>
+        {/* <form
           className="shadow-lg border border-primary rounded bg-light"
           id="form1"
           action="http://enf.lablog.net:81/"
@@ -122,7 +118,7 @@ function About() {
               提交
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
     </div>
   );
