@@ -46,7 +46,7 @@ function Icons() {
           图标库-图标列表
           <svg
             t="1607836308591"
-            class="icon"
+            className="icon"
             viewBox="0 0 1024 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ function Icons() {
               fill="#ffffff"
               p-id="5964"
               data-spm-anchor-id="a313x.7781069.0.i5"
-              class="selected"
+              className="selected"
             ></path>
             <path
               d="M231.333598 701.150476c0.993429-1.068689 2.092223-2.016963 3.130808-3.055549h-3.130808v3.055549z"
@@ -81,7 +81,7 @@ function Icons() {
               fill="#ffffff"
               p-id="5968"
               data-spm-anchor-id="a313x.7781069.0.i6"
-              class="selected"
+              className="selected"
             ></path>
           </svg>
         </h1>
