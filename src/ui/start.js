@@ -115,13 +115,13 @@ function Start() {
         </h2>
         <h3>方法一：使用Eicon CDN</h3>
         <Highlight className="html">
-          {`<link rel="stylesheet" href="https://eicon.lablog.net/v1.eicon.main.css">`}
+          {`<link rel="stylesheet" href="https://cdn.eiconfont.com/v1.eicon.main.css" />`}
         </Highlight>
         <hr />
         <h3>
           方法二：下载
           <a
-            href="https://eicon.lablog.net/v1.eicon.main.css"
+            href="https://cdn.eiconfont.com/v1.eicon.main.css"
             target="_blank"
             rel="noreferrer"
           >
@@ -131,7 +131,7 @@ function Start() {
         </h3>
         <a
           style={{ width: "300px", height: "40px", marginBottom: "10px" }}
-          href="https://eiconcdn.oss-cn-beijing.aliyuncs.com/v1.eicon.main.zip"
+          href="https://cdn.eiconfont.com/v1.eicon.main.zip"
           className="btn btn-primary btn-lg active"
           role="button"
           aria-pressed="true"
@@ -174,7 +174,7 @@ function Start() {
           Download Eicon-1.0
         </a>
         <Highlight className="html">
-          {`<link rel="stylesheet" href="css/v1.eicon.main.css">`}
+          {`<link rel="stylesheet" href="css/v1.eicon.main.css" />`}
         </Highlight>
         <div className="progress" style={{ marginTop: "10px" }}>
           <div
@@ -220,7 +220,7 @@ function Start() {
           第二步-挑选图标
         </h2>
         <p className="h3">
-          前往<a href="/#/icons">图标库</a>挑选所需要的图标，找到对应的图标类名
+          前往<a href="/#/icons">图标库</a>挑选所需要的图标，找到对应图标的类名
           <br />
           每个图标下<b>第二行</b>就是图标的类名。
         </p>
@@ -265,12 +265,12 @@ function Start() {
         </h2>
         <Highlight className="html">
           {`<!--将xxx替换为图标类名即可-->
-<span className="eicon xxx"></span>`}
+<span class="eicon xxx" />`}
         </Highlight>
         <hr />
         <p className="h3">使用举例：</p>
         <Highlight className="html">
-          {`<span className="eicon eiconconsole"></span>  `}
+          {`<span class="eicon eiconconsole" />`}
         </Highlight>
         <p className="h3">
           效果如下：
@@ -319,9 +319,9 @@ function Start() {
           通过设置CSS的font-size属性可以调整图标大小，如下所示：
         </p>
         <Highlight className="html">
-          {`<span className="eicon eiconhome" style="font-size: xx-large;"></span>
-<span className="eicon eiconhome" style="font-size: medium;"></span>
-<span className="eicon eiconhome" style="font-size: xx-small;"></span>`}
+          {`<span class="eicon eiconhome" style="font-size: xx-large;" />
+<span class="eicon eiconhome" style="font-size: medium;" />
+<span class="eicon eiconhome" style="font-size: xx-small;" />`}
         </Highlight>
         <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
         <span className="eicon eiconhome" style={{ fontSize: "medium" }} />
