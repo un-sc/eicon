@@ -1,36 +1,6 @@
-# eicon
-
-#### Description
-eicon网站源码仓库
-
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### Ecion icon library
+The project is Eicon icon library source code, the actual effect website:[https://www.eiconfont.com](https://www.eiconfont.com)
+### Author
+The developer of this project is Lianan
+### About Eicon icon library
+Eicon is a free icon library with 729 icons. The original design of this icon library is to make it more convenient to use the icons on the web pages, so that the icons are flexibly displayed on the web pages. All icons in this icon gallery are svg vector icons, which can be enlarged or shrunk freely to ensure clarity. At the same time, the icon library through the class attribute of the &lt;span&gt; tag to specify the icon, writing intuitive, semantically clear, no tedious code. You also only need to change the class attribute when changing icons, making the icon library more flexible. In addition, the icon library doesn't require JavaScript support, so you don't have to worry about compatibility with different browsers for javascript. This icon library supports IE8 +, and all modern browsers.
