@@ -15,6 +15,16 @@ const data2 = [
   "兼容性较差，支持 IE9+，及现代浏览器。",
   "浏览器渲染 SVG 的性能一般，还不如 png。",
 ]
+const en_data1 = [
+  "The meaning is clear and the writing is intuitive. It is easy to distinguish what this icon is.",
+  "Use class to define icons. When changing, only modify the Unicode in class",
+];
+const en_data2 = [
+  "Multi color icons are supported and are no longer limited by monochrome.",
+  "Through some skills, support to adjust the style through font size and color like font.",
+  "Poor compatibility, support IE9 +, and modern browsers.",
+  "The performance of browser rendering SVG is average, not as good as PNG.",
+]
 const { TabPane } = Tabs;
 function callback(key) {
   console.log(key);
@@ -94,6 +104,7 @@ function Start() {
       <div className="container">
         <Tabs defaultActiveKey="1" onChange={callback}>
           <TabPane tab="中文" key="1">
+
             <div>
               <h2>欢迎使用Eicon图标库</h2>
               <h4>Eicon是一款可以免费使用的图标库，拥有着729个图标。如果您想了解如何使用本图标库，您可以参考本页面的内容。</h4>
@@ -144,13 +155,13 @@ function Start() {
 <span class="eicon eiconhome" style="font-size: xx-small; color: blue" />`}
                   </Highlight>
                   <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
-                  <span className="eicon eiconhome" style={{ fontSize: "medium", color:"red" }} />
-                  <span className="eicon eiconhome" style={{ fontSize: "xx-small", color:"blue" }} />
+                  <span className="eicon eiconhome" style={{ fontSize: "medium", color: "red" }} />
+                  <span className="eicon eiconhome" style={{ fontSize: "xx-small", color: "blue" }} />
                 </TabPane>
                 <TabPane tab="Symbol引用" key="2">
                   <h3><b>Symbol使用方式</b></h3>
                   <h4>
-                    这是一种全新的使用方式，应该说这才是未来的主流，也是平台目前推荐的用法。相关介绍可以参考这篇文章 这种用法其实是做了一个 SVG 的集合，与另外两种相比具有如下特点：
+                    这是一种全新的使用方式，应该说这才是未来的主流，也是平台目前推荐的用法。相关介绍可以参考这篇文章。这种用法其实是做了一个SVG的集合，与另外两种相比具有如下特点：
                     <List
                       size="small"
                       bordered
@@ -214,524 +225,153 @@ function Start() {
   <use xlink:href="#eiconhome"></use>
 </svg>`}
                   </Highlight>
-                  <svg className="icon" aria-hidden="true" style={{fontSize:"xx-large"}}>
+                  <svg className="icon" aria-hidden="true" style={{ fontSize: "xx-large" }}>
                     <use xlinkHref="#eiconhome"></use>
                   </svg>
-                  <svg className="icon" aria-hidden="true" style={{fontSize:"medium", color:"red"}}>
+                  <svg className="icon" aria-hidden="true" style={{ fontSize: "medium", color: "red" }}>
                     <use xlinkHref="#eiconhome"></use>
                   </svg>
-                  <svg className="icon" aria-hidden="true" style={{fontSize:"xx-small", color:"blue"}}>
+                  <svg className="icon" aria-hidden="true" style={{ fontSize: "xx-small", color: "blue" }}>
                     <use xlinkHref="#eiconhome"></use>
                   </svg>
                 </TabPane>
               </Tabs>
             </div>
-            {/* <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607770785942"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="26341"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M512-21.33333333h426.666667v1024l-426.666667-256-426.666667 256V-21.33333333h426.666667z"
-                  fill="#FF4A4A"
-                  p-id="26342"
-                ></path>
-                <path
-                  d="M512 746.66666667L85.333333 1002.66666667V-21.33333333h426.666667v768z"
-                  fill="#FF6E6E"
-                  p-id="26343"
-                ></path>
-                <path
-                  d="M549.205333 597.333333H465.237333V322.389333L387.413333 389.973333v-89.6l77.824-67.584h83.968z"
-                  fill="#FFFFFF"
-                  p-id="26344"
-                ></path>
-              </svg>
-              第一步-引用CSS文件
-            </h2>
-            <h3>方法一：使用Eicon CDN</h3>
-            <Highlight className="html">
-              {`<link rel="stylesheet" href="https://cdn.eiconfont.com/v1.eicon.main.css" />`}
-            </Highlight>
-            <hr />
-            <h3>
-              方法二：下载
-              <a
-                href="https://cdn.eiconfont.com/v1.eicon.main.css"
-                target="_blank"
-                rel="noreferrer"
-              >
-                css文件
-              </a>
-              至本地
-            </h3>
-            <a
-              style={{ width: "300px", height: "40px", marginBottom: "10px" }}
-              href="https://cdn.eiconfont.com/v1.eicon.main.zip"
-              className="btn btn-primary btn-lg active"
-              role="button"
-              aria-pressed="true"
-            >
-              <svg
-                t="1607771863106"
-                className="icon"
-                viewBox="0 0 1025 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="28232"
-                height="90%"
-              >
-                <path
-                  d="M345.121632 856.772995l160.942192 160.942191a21.232479 21.232479 0 0 0 30.15012 0l160.942191-160.942191a21.232479 21.232479 0 0 0-14.862735-36.095214h-117.203285v-416.58124a42.464958 42.464958 0 0 0-84.929916 0v416.58124h-120.175831a21.232479 21.232479 0 0 0-14.862736 36.095214z"
-                  fill="#1CC9C9"
-                  p-id="28233"
-                ></path>
-                <path
-                  d="M521.775858 361.206934a42.464958 42.464958 0 0 0-42.464958 42.464958v382.184623h84.929916v-382.184623a42.464958 42.464958 0 0 0-42.464958-42.464958z"
-                  fill="#1BAAA6"
-                  p-id="28234"
-                ></path>
-                <path
-                  d="M897.166088 357.385088v-17.410633a339.719665 339.719665 0 0 0-655.658954-123.997678 275.597578 275.597578 0 0 0 18.684582 548.647259h552.044456a212.324791 212.324791 0 0 0 84.929916-407.238948z"
-                  fill="#24D6ED"
-                  p-id="28235"
-                ></path>
-                <path
-                  d="M875.08431 378.617567v-17.410633a329.103425 329.103425 0 0 0-634.426475-145.230157 53.123663 53.123663 0 0 0-13.588786 3.397197 339.719665 339.719665 0 0 0 387.280418 472.210334 214.448038 214.448038 0 0 0 84.929916 73.464377h112.956789a199.585303 199.585303 0 0 0 62.848138-386.006469z"
-                  fill="#1EB6C1"
-                  p-id="28236"
-                ></path>
-                <path
-                  d="M897.166088 357.385088v-17.410633a339.719665 339.719665 0 1 0-261.584142 330.377374 212.324791 212.324791 0 1 0 260.310193-312.966741z"
-                  fill="#22E6EF"
-                  p-id="28237"
-                ></path>
-              </svg>
-              Download Eicon-1.0
-            </a>
-            <Highlight className="html">
-              {`<link rel="stylesheet" href="css/v1.eicon.main.css" />`}
-            </Highlight>
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607770856252"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="27465"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M520.217284 0h426.666667v1024l-426.666667-256L93.550617 1024V0h426.666667z m0 0"
-                  fill="#CDCBCE"
-                  p-id="27466"
-                  data-spm-anchor-id="a313x.7781069.0.i7"
-                  className=""
-                ></path>
-                <path
-                  d="M520.217284 768L93.550617 1024V0h426.666667v768z m0 0"
-                  fill="#E6E3E6"
-                  p-id="27467"
-                  data-spm-anchor-id="a313x.7781069.0.i8"
-                  className="selected"
-                ></path>
-                <path
-                  d="M611.239506 597.333333H376.730864v-75.851852l132.108642-143.486419c13.274074-14.538272 18.330864-23.387654 18.330864-39.190124 0-20.22716-11.377778-33.501235-32.869135-33.501234-15.17037 0-33.501235 6.953086-33.501235 35.397531H376.730864c0-71.42716 54.360494-111.249383 117.570371-111.249383 67.634568 0 116.938272 41.718519 116.938271 109.985185 0 38.558025-15.802469 58.785185-44.879012 89.758025L479.130864 521.481481h132.108642v75.851852z m0 0"
-                  fill="#333333"
-                  p-id="27468"
-                ></path>
-              </svg>
-              第二步-挑选图标
-            </h2>
-            <p className="h3">
-              前往<a href="/#/icons" target="_blank">图标库</a>挑选所需要的图标，找到对应图标的类名
-              <br />
-              每个图标下<b>第二行</b>就是图标的类名。
-            </p>
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607783980611"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="3250"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M512 0h426.666667v1024l-426.666667-256-426.666667 256V0h426.666667z"
-                  fill="#FFAC4A"
-                  p-id="3251"
-                ></path>
-                <path
-                  d="M512 768L85.333333 1024V0h426.666667v768z"
-                  fill="#FFBC6E"
-                  p-id="3252"
-                ></path>
-                <path
-                  d="M605.525333 488.277333c0 76.288-57.344 112.128-121.344 112.128-60.416 0-121.344-32.256-121.344-114.176h83.968c0 25.6 16.384 38.4 37.376 38.4 22.016 0 37.376-12.8 37.376-38.912 0-22.016-16.384-38.4-38.912-38.4h-11.776V374.613333h11.776c25.088 0 34.816-17.92 34.816-34.304 0-23.04-15.872-34.816-33.28-34.816-17.408 0-33.28 12.288-33.28 34.304H366.933333c0-68.608 52.224-110.08 117.248-110.08 67.584 0 117.248 45.056 117.248 108.032 0 39.936-19.456 59.392-37.888 71.168 19.968 13.824 41.984 35.84 41.984 79.36z"
-                  fill="#FFFFFF"
-                  p-id="3253"
-                ></path>
-              </svg>
-              第三步-引用图标
-            </h2>
-            <Highlight className="html">
-              {`<!--将xxx替换为图标类名即可-->
-<span class="eicon xxx" />`}
-            </Highlight>
-            <hr />
-            <p className="h3">使用举例：</p>
-            <Highlight className="html">
-              {`<span class="eicon eiconconsole" />`}
-            </Highlight>
-            <p className="h3">
-              效果如下：
-              <span className="eicon eiconconsole"></span>
-            </p>
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607785819669"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="4154"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M512 0h426.666667v1024l-426.666667-256-426.666667 256V0h426.666667z"
-                  fill="#B5B5B5"
-                  p-id="4155"
-                ></path>
-                <path
-                  d="M512 768L85.333333 1024V0h426.666667v768z"
-                  fill="#C3C3C3"
-                  p-id="4156"
-                ></path>
-                <path
-                  d="M612.693333 549.205333h-27.136V597.333333H505.685333v-48.128h-151.04V469.333333l120.832-236.544h92.16L446.805333 469.333333h58.88V421.205333h79.872V469.333333h27.136z"
-                  fill="#FFFFFF"
-                  p-id="4157"
-                ></path>
-              </svg>
-              第四步-调整图标大小
-            </h2>
-            <p className="h3">
-              通过设置CSS的font-size属性可以调整图标大小，如下所示：
-            </p>
-            <Highlight className="html">
-              {`<span class="eicon eiconhome" style="font-size: xx-large;" />
-<span class="eicon eiconhome" style="font-size: medium;" />
-<span class="eicon eiconhome" style="font-size: xx-small;" />`}
-            </Highlight>
-            <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
-            <span className="eicon eiconhome" style={{ fontSize: "medium" }} />
-            <span className="eicon eiconhome" style={{ fontSize: "xx-small" }} />
-            <hr /> */}
           </TabPane>
           <TabPane tab="English" key="2">
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607770785942"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="26341"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M512-21.33333333h426.666667v1024l-426.666667-256-426.666667 256V-21.33333333h426.666667z"
-                  fill="#FF4A4A"
-                  p-id="26342"
-                ></path>
-                <path
-                  d="M512 746.66666667L85.333333 1002.66666667V-21.33333333h426.666667v768z"
-                  fill="#FF6E6E"
-                  p-id="26343"
-                ></path>
-                <path
-                  d="M549.205333 597.333333H465.237333V322.389333L387.413333 389.973333v-89.6l77.824-67.584h83.968z"
-                  fill="#FFFFFF"
-                  p-id="26344"
-                ></path>
-              </svg>
-              Step 1 - Reference CSS file
-            </h2>
-            <h3>Method 1: using Eicon CDN</h3>
-            <Highlight className="html">
-              {`<link rel="stylesheet" href="https://cdn.eiconfont.com/v1.eicon.main.css" />`}
-            </Highlight>
-            <hr />
-            <h3>
-              Method 2: download <a
-                href="https://cdn.eiconfont.com/v1.eicon.main.css"
-                target="_blank"
-                rel="noreferrer"
-              >
-                the CSS file
-              </a> to the local
-            </h3>
-            <a
-              style={{ width: "300px", height: "40px", marginBottom: "10px" }}
-              href="https://cdn.eiconfont.com/v1.eicon.main.zip"
-              className="btn btn-primary btn-lg active"
-              role="button"
-              aria-pressed="true"
-            >
-              <svg
-                t="1607771863106"
-                className="icon"
-                viewBox="0 0 1025 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="28232"
-                height="90%"
-              >
-                <path
-                  d="M345.121632 856.772995l160.942192 160.942191a21.232479 21.232479 0 0 0 30.15012 0l160.942191-160.942191a21.232479 21.232479 0 0 0-14.862735-36.095214h-117.203285v-416.58124a42.464958 42.464958 0 0 0-84.929916 0v416.58124h-120.175831a21.232479 21.232479 0 0 0-14.862736 36.095214z"
-                  fill="#1CC9C9"
-                  p-id="28233"
-                ></path>
-                <path
-                  d="M521.775858 361.206934a42.464958 42.464958 0 0 0-42.464958 42.464958v382.184623h84.929916v-382.184623a42.464958 42.464958 0 0 0-42.464958-42.464958z"
-                  fill="#1BAAA6"
-                  p-id="28234"
-                ></path>
-                <path
-                  d="M897.166088 357.385088v-17.410633a339.719665 339.719665 0 0 0-655.658954-123.997678 275.597578 275.597578 0 0 0 18.684582 548.647259h552.044456a212.324791 212.324791 0 0 0 84.929916-407.238948z"
-                  fill="#24D6ED"
-                  p-id="28235"
-                ></path>
-                <path
-                  d="M875.08431 378.617567v-17.410633a329.103425 329.103425 0 0 0-634.426475-145.230157 53.123663 53.123663 0 0 0-13.588786 3.397197 339.719665 339.719665 0 0 0 387.280418 472.210334 214.448038 214.448038 0 0 0 84.929916 73.464377h112.956789a199.585303 199.585303 0 0 0 62.848138-386.006469z"
-                  fill="#1EB6C1"
-                  p-id="28236"
-                ></path>
-                <path
-                  d="M897.166088 357.385088v-17.410633a339.719665 339.719665 0 1 0-261.584142 330.377374 212.324791 212.324791 0 1 0 260.310193-312.966741z"
-                  fill="#22E6EF"
-                  p-id="28237"
-                ></path>
-              </svg>
-              Download Eicon-1.0
-            </a>
-            <Highlight className="html">
-              {`<link rel="stylesheet" href="css/v1.eicon.main.css" />`}
-            </Highlight>
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607770856252"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="27465"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M520.217284 0h426.666667v1024l-426.666667-256L93.550617 1024V0h426.666667z m0 0"
-                  fill="#CDCBCE"
-                  p-id="27466"
-                  data-spm-anchor-id="a313x.7781069.0.i7"
-                  className=""
-                ></path>
-                <path
-                  d="M520.217284 768L93.550617 1024V0h426.666667v768z m0 0"
-                  fill="#E6E3E6"
-                  p-id="27467"
-                  data-spm-anchor-id="a313x.7781069.0.i8"
-                  className="selected"
-                ></path>
-                <path
-                  d="M611.239506 597.333333H376.730864v-75.851852l132.108642-143.486419c13.274074-14.538272 18.330864-23.387654 18.330864-39.190124 0-20.22716-11.377778-33.501235-32.869135-33.501234-15.17037 0-33.501235 6.953086-33.501235 35.397531H376.730864c0-71.42716 54.360494-111.249383 117.570371-111.249383 67.634568 0 116.938272 41.718519 116.938271 109.985185 0 38.558025-15.802469 58.785185-44.879012 89.758025L479.130864 521.481481h132.108642v75.851852z m0 0"
-                  fill="#333333"
-                  p-id="27468"
-                ></path>
-              </svg>
-              Step 2 - select icons
-            </h2>
-            <p className="h3">
-              Go to <a href="/#/icons" target="_blank">the icon library</a> to select the needed icon and find the class name of the corresponding icon.
-              <br />
-              The second line under each icon is the class name of the icon.
-            </p>
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h2>
-              <svg
-                t="1607783980611"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="3250"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M512 0h426.666667v1024l-426.666667-256-426.666667 256V0h426.666667z"
-                  fill="#FFAC4A"
-                  p-id="3251"
-                ></path>
-                <path
-                  d="M512 768L85.333333 1024V0h426.666667v768z"
-                  fill="#FFBC6E"
-                  p-id="3252"
-                ></path>
-                <path
-                  d="M605.525333 488.277333c0 76.288-57.344 112.128-121.344 112.128-60.416 0-121.344-32.256-121.344-114.176h83.968c0 25.6 16.384 38.4 37.376 38.4 22.016 0 37.376-12.8 37.376-38.912 0-22.016-16.384-38.4-38.912-38.4h-11.776V374.613333h11.776c25.088 0 34.816-17.92 34.816-34.304 0-23.04-15.872-34.816-33.28-34.816-17.408 0-33.28 12.288-33.28 34.304H366.933333c0-68.608 52.224-110.08 117.248-110.08 67.584 0 117.248 45.056 117.248 108.032 0 39.936-19.456 59.392-37.888 71.168 19.968 13.824 41.984 35.84 41.984 79.36z"
-                  fill="#FFFFFF"
-                  p-id="3253"
-                ></path>
-              </svg>
-              Step 3 - Reference icons
-            </h2>
-            <Highlight className="html">
-              {`<!--Replace XXX with the icon class name-->
+            <div>
+              <h2>Welcome to use Eicon Icon Library</h2>
+              <h4>Eicon is a free icon library with 729 icons. If you want to know how to use this icon library, you can refer to the contents of this page.</h4>
+              <h4>If you want Eicon icons to appear in your project, you need to refer to the icon library file, and then type the corresponding code in the project.</h4>
+              <h4>At present, Eicon supports two usage modes: font class reference and symbol reference. You can learn the differences and steps between the two reference methods below.</h4>
+              <Tabs defaultActiveKey="1" onChange={callback}>
+                <TabPane tab="Font-Class usage" key="1">
+                  <h3><b>Font-Class usage</b></h3>
+                  <h4>
+                    Font-Class has the following characteristics:
+                    <List
+                      size="small"
+                      bordered
+                      dataSource={en_data1}
+                      renderItem={item => <List.Item>{item}</List.Item>}
+                    />
+                  </h4>
+                  <h3><b>Step 1 - Reference CSS file</b></h3>
+                  <h4>Using Eicon CDN or <a href="https://cdn.eiconfont.com/v1.eicon.main.zip" target="_blank" rel="noreferrer">download the CSS file</a> locally for reference.</h4>
+                  <Highlight className="html">
+                    {`<link rel="stylesheet" href="https://cdn.eiconfont.com/v1.eicon.main.css" />`}
+                  </Highlight>
+                  <h3><b>Step 2 - select the desired icon</b></h3>
+                  <h4>
+                    Go to <a href="/#/icons" target="_blank">icons library</a> select the required icon and find the class name of the corresponding icon.
+                    <br />
+                    The second line under each icon is the class name of the icon.
+                  </h4>
+                  <h3><b>Step 3 - use icons</b></h3>
+                  <Highlight className="html">
+                    {`<!--Replace XXX with the icon class name-->
 <span class="eicon xxx" />`}
-            </Highlight>
-            <hr />
-            <p className="h3">Examples:</p>
-            <Highlight className="html">
-              {`<span class="eicon eiconconsole" />`}
-            </Highlight>
-            <p className="h3">
-              The results are as follows:
-              <span className="eicon eiconconsole"></span>
-            </p>
-            <div className="progress" style={{ marginTop: "10px" }}>
-              <div
-                className="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                style={{ width: "100%" }}
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
+                  </Highlight>
+                  <hr />
+                  <h4>Using examples:</h4>
+                  <Highlight className="html">
+                    {`<span class="eicon eiconconsole" />`}
+                  </Highlight>
+                  <h4>
+                    The effects are as follows:
+                    <span className="eicon eiconconsole"></span>
+                  </h4>
+                  <h3><b>Step 4 - adjust icon size and color</b></h3>
+                  <h4>The icon size and color can be adjusted by setting the font size and color properties of CSS, as shown below:</h4>
+                  <Highlight className="html">
+                    {`<span class="eicon eiconhome" style="font-size: xx-large;" />
+<span class="eicon eiconhome" style="font-size: medium; color: red" />
+<span class="eicon eiconhome" style="font-size: xx-small; color: blue" />`}
+                  </Highlight>
+                  <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
+                  <span className="eicon eiconhome" style={{ fontSize: "medium", color: "red" }} />
+                  <span className="eicon eiconhome" style={{ fontSize: "xx-small", color: "blue" }} />
+                </TabPane>
+                <TabPane tab="Symbol usage" key="2">
+                  <h3><b>Symbol usage</b></h3>
+                  <h4>
+                    This is a new way of use. It should be said that this is the mainstream in the future and the currently recommended usage of the platform. For relevant introduction, please refer to this article. This usage is actually a collection of SVGs. Compared with the other two, it has the following characteristics:
+                    <List
+                      size="small"
+                      bordered
+                      dataSource={en_data2}
+                      renderItem={item => <List.Item>{item}</List.Item>}
+                    />
+                  </h4>
+                  <h3><b>Step 1 - Reference JS file</b></h3>
+                  <h4>Using Eicon CDN或<a href="https://cdn.eiconfont.com/v1.eicon.main.zip" target="_blank" rel="noreferrer">Download the JS file</a>locally for reference.</h4>
+                  <Highlight className="html">
+                    {`<script src="https://cdn.eiconfont.com/v1.eicon.main.js"></script>`}
+                  </Highlight>
+                  <h3><b>Step 2 - set general CSS (just one time)</b></h3>
+                  <Highlight className="html">
+                    {`<style>
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+</style>`}
+                  </Highlight>
+                  <h3><b>Step 3 - select the desired icon</b></h3>
+                  <h4>
+                    Go to <a href="/#/icons" target="_blank">icons library</a> Select the required icon and find the class name of the corresponding icon.
+                    <br />
+                    The second line under each icon is the class name of the icon.
+                  </h4>
+                  <h3><b>Step 4 - use icons</b></h3>
+                  <Highlight className="html">
+                    {`<!--Replace XXX with the icon class name-->
+<svg class="icon" aria-hidden="true">
+  <use xlink:href="#xxx"></use>
+</svg>`}
+                  </Highlight>
+                  <h4>Use examples:</h4>
+                  <Highlight>
+                    {`<svg class="icon" aria-hidden="true">
+  <use xlink:href="#eiconconsole"></use>
+</svg>
+`}
+                  </Highlight>
+                  <h4>
+                    The effects are as follows:
+                    <svg className="icon" aria-hidden="true">
+                      <use xlinkHref="#eiconconsole"></use>
+                    </svg>
+                  </h4>
+                  <h3><b>Step 5 - adjust icon size and color</b></h3>
+                  <h4>The icon size and color can be adjusted by setting the font size and color properties of CSS, as shown below:</h4>
+                  <Highlight className="html">
+                    {`<svg class="icon" aria-hidden="true" style="font-size: xx-large;">
+  <use xlink:href="#eiconhome"></use>
+</svg>
+<svg class="icon" aria-hidden="true" style="font-size: medium;color:red">
+  <use xlink:href="#eiconhome"></use>
+</svg>
+<svg class="icon" aria-hidden="true" style="font-size: xx-small;color:blue">
+  <use xlink:href="#eiconhome"></use>
+</svg>`}
+                  </Highlight>
+                  <svg className="icon" aria-hidden="true" style={{ fontSize: "xx-large" }}>
+                    <use xlinkHref="#eiconhome"></use>
+                  </svg>
+                  <svg className="icon" aria-hidden="true" style={{ fontSize: "medium", color: "red" }}>
+                    <use xlinkHref="#eiconhome"></use>
+                  </svg>
+                  <svg className="icon" aria-hidden="true" style={{ fontSize: "xx-small", color: "blue" }}>
+                    <use xlinkHref="#eiconhome"></use>
+                  </svg>
+                </TabPane>
+              </Tabs>
             </div>
-            <h2>
-              <svg
-                t="1607785819669"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="4154"
-                width="100"
-                height="100"
-              >
-                <path
-                  d="M512 0h426.666667v1024l-426.666667-256-426.666667 256V0h426.666667z"
-                  fill="#B5B5B5"
-                  p-id="4155"
-                ></path>
-                <path
-                  d="M512 768L85.333333 1024V0h426.666667v768z"
-                  fill="#C3C3C3"
-                  p-id="4156"
-                ></path>
-                <path
-                  d="M612.693333 549.205333h-27.136V597.333333H505.685333v-48.128h-151.04V469.333333l120.832-236.544h92.16L446.805333 469.333333h58.88V421.205333h79.872V469.333333h27.136z"
-                  fill="#FFFFFF"
-                  p-id="4157"
-                ></path>
-              </svg>
-              Step 4 - size the icons
-            </h2>
-            <p className="h3">
-              You can adjust the icon size by setting the font size property of CSS, as follows:
-            </p>
-            <Highlight className="html">
-              {`<span class="eicon eiconhome" style="font-size: xx-large;" />
-<span class="eicon eiconhome" style="font-size: medium;" />
-<span class="eicon eiconhome" style="font-size: xx-small;" />`}
-            </Highlight>
-            <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
-            <span className="eicon eiconhome" style={{ fontSize: "medium" }} />
-            <span className="eicon eiconhome" style={{ fontSize: "xx-small" }} />
-            <hr />
+
           </TabPane>
         </Tabs>
       </div>
