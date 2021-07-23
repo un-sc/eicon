@@ -1,8 +1,39 @@
+import React, { useState } from 'react';
 import logo from "./logo.svg";
+import 'antd/dist/antd.css';
+import { Affix, Menu } from 'antd';
 
-function Menu() {
+function MenuJs() {
+  const [top] = useState(0);
   return (
     <div>
+      <Affix offsetTop={top}>
+        <Menu mode="horizontal" theme="dark">
+          <Menu.Item key="logo">
+            <img
+              src={logo}
+              width="40"
+              height="40"
+              // className="d-inline-block align-top"
+              alt=""
+            // loading="lazy"
+            />Eicon
+          </Menu.Item>
+          <Menu.Item key="Home">
+            <a href="/">首页</a>
+          </Menu.Item>
+          <Menu.Item key="Start">
+            <a href="/#/start">开始使用</a>
+          </Menu.Item>
+          <Menu.Item key="Icons">
+            <a href="/#/icons">图标库</a>
+          </Menu.Item>
+          <Menu.Item key="About">
+            <a href="/#/about">关于</a>
+          </Menu.Item>
+        </Menu>
+      </Affix>
+      {/*       
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <button
           className="navbar-toggler"
@@ -52,8 +83,9 @@ function Menu() {
           </ul>
         </div>
       </nav>
+     */}
     </div>
   );
 }
 
-export default Menu;
+export default MenuJs;

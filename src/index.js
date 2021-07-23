@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import "./ui/index.css";
-import Menu from "./ui/Menu";
+import MenuJs from "./ui/Menu";
 import Footer from "./ui/Footer";
 import App from "./ui/App";
 import Icons from "./ui/icons";
@@ -22,7 +22,7 @@ ReactDOM.render(
           path="/"
           component={() => (
             <div>
-              <Menu />
+              <MenuJs />
               <App />
               <Footer />
             </div>
@@ -32,7 +32,7 @@ ReactDOM.render(
           path="/start"
           component={() => (
             <div>
-              <Menu />
+              <MenuJs />
               <Start />
               <Footer />
             </div>
@@ -42,7 +42,7 @@ ReactDOM.render(
           path="/icons"
           component={() => (
             <div>
-              <Menu />
+              <MenuJs />
               <Icons />
               <Iconlist />
               <Footer />
@@ -53,7 +53,7 @@ ReactDOM.render(
           path="/about"
           component={() => (
             <div>
-              <Menu />
+              <MenuJs />
               <About />
               <Footer />
             </div>

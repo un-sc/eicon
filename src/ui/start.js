@@ -3,10 +3,23 @@ import "highlight.js/styles/zenburn.css";
 import { Helmet } from "react-helmet";
 import logo from "./logo.svg";
 import { Tabs } from 'antd';
+import { List } from 'antd';
+import "./icon.css"
+const data1 = [
+  "语意明确，书写直观，很容易分辨这个图标是什么。",
+  "使用class来定义图标，更改时只用修改class里的Unicode即可。",
+];
+const data2 = [
+  "支持多色图标了，不再受单色限制。",
+  "通过一些技巧，支持像字体那样，通过 font-size, color 来调整样式。",
+  "兼容性较差，支持 IE9+，及现代浏览器。",
+  "浏览器渲染 SVG 的性能一般，还不如 png。",
+]
 const { TabPane } = Tabs;
 function callback(key) {
   console.log(key);
-}
+};
+
 
 function Start() {
   return (
@@ -81,7 +94,139 @@ function Start() {
       <div className="container">
         <Tabs defaultActiveKey="1" onChange={callback}>
           <TabPane tab="中文" key="1">
-            <div className="progress" style={{ marginTop: "10px" }}>
+            <div>
+              <h2>欢迎使用Eicon图标库</h2>
+              <h4>Eicon是一款可以免费使用的图标库，拥有着729个图标。如果您想了解如何使用本图标库，您可以参考本页面的内容。</h4>
+              <h4>如果您想使Eicon图标呈现在您的项目中，您需要引用图标库的文件，然后在项目中键入相对于的代码。</h4>
+              <h4>目前Eicon支持两种使用方式：Font-Class引用和Symbol引用。您可以在下方了解这两种引用方式的区别和步骤。</h4>
+              <Tabs defaultActiveKey="1" onChange={callback}>
+                <TabPane tab="Font-Class引用" key="1">
+                  <h3><b>Font-Class使用方式</b></h3>
+                  <h4>
+                    Font-Class这种使用方式具有以下特点：
+                    <List
+                      size="small"
+                      bordered
+                      dataSource={data1}
+                      renderItem={item => <List.Item>{item}</List.Item>}
+                    />
+                  </h4>
+                  <h3><b>第一步，引用css文件</b></h3>
+                  <h4>使用Eicon CDN或<a href="https://cdn.eiconfont.com/v1.eicon.main.zip" target="_blank" rel="noreferrer">下载css文件</a>至本地来引用。</h4>
+                  <Highlight className="html">
+                    {`<link rel="stylesheet" href="https://cdn.eiconfont.com/v1.eicon.main.css" />`}
+                  </Highlight>
+                  <h3><b>第二步，挑选所需图标</b></h3>
+                  <h4>
+                    前往<a href="/#/icons" target="_blank">图标库</a>挑选所需要的图标，找到对应图标的类名。
+                    <br />
+                    每个图标下<b>第二行</b>就是图标的类名。
+                  </h4>
+                  <h3><b>第三步，使用图标</b></h3>
+                  <Highlight className="html">
+                    {`<!--将xxx替换为图标类名即可-->
+<span class="eicon xxx" />`}
+                  </Highlight>
+                  <hr />
+                  <h4>使用举例：</h4>
+                  <Highlight className="html">
+                    {`<span class="eicon eiconconsole" />`}
+                  </Highlight>
+                  <h4>
+                    效果如下：
+                    <span className="eicon eiconconsole"></span>
+                  </h4>
+                  <h3><b>第四步，调整图标大小及颜色</b></h3>
+                  <h4>通过设置CSS的font-size和color属性可以调整图标大小以及颜色，如下所示：</h4>
+                  <Highlight className="html">
+                    {`<span class="eicon eiconhome" style="font-size: xx-large;" />
+<span class="eicon eiconhome" style="font-size: medium; color: red" />
+<span class="eicon eiconhome" style="font-size: xx-small; color: blue" />`}
+                  </Highlight>
+                  <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
+                  <span className="eicon eiconhome" style={{ fontSize: "medium", color:"red" }} />
+                  <span className="eicon eiconhome" style={{ fontSize: "xx-small", color:"blue" }} />
+                </TabPane>
+                <TabPane tab="Symbol引用" key="2">
+                  <h3><b>Symbol使用方式</b></h3>
+                  <h4>
+                    这是一种全新的使用方式，应该说这才是未来的主流，也是平台目前推荐的用法。相关介绍可以参考这篇文章 这种用法其实是做了一个 SVG 的集合，与另外两种相比具有如下特点：
+                    <List
+                      size="small"
+                      bordered
+                      dataSource={data2}
+                      renderItem={item => <List.Item>{item}</List.Item>}
+                    />
+                  </h4>
+                  <h3><b>第一步，引用JS文件</b></h3>
+                  <h4>使用Eicon CDN或<a href="https://cdn.eiconfont.com/v1.eicon.main.zip" target="_blank" rel="noreferrer">下载JS文件</a>至本地来引用。</h4>
+                  <Highlight className="html">
+                    {`<script src="https://cdn.eiconfont.com/v1.eicon.main.js"></script>`}
+                  </Highlight>
+                  <h3><b>第二步，设置通用CSS（一次就行）</b></h3>
+                  <Highlight className="html">
+                    {`<style>
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+</style>`}
+                  </Highlight>
+                  <h3><b>第三步，挑选所需图标</b></h3>
+                  <h4>
+                    前往<a href="/#/icons" target="_blank">图标库</a>挑选所需要的图标，找到对应图标的类名。
+                    <br />
+                    每个图标下<b>第二行</b>就是图标的类名。
+                  </h4>
+                  <h3><b>第四步，使用图标</b></h3>
+                  <Highlight className="html">
+                    {`<!--将xxx替换为图标类名即可-->
+<svg class="icon" aria-hidden="true">
+  <use xlink:href="#xxx"></use>
+</svg>`}
+                  </Highlight>
+                  <h4>使用举例：</h4>
+                  <Highlight>
+                    {`<svg class="icon" aria-hidden="true">
+  <use xlink:href="#eiconconsole"></use>
+</svg>
+`}
+                  </Highlight>
+                  <h4>
+                    效果如下：
+                    <svg className="icon" aria-hidden="true">
+                      <use xlinkHref="#eiconconsole"></use>
+                    </svg>
+                  </h4>
+                  <h3><b>第五步，调整图标大小及颜色</b></h3>
+                  <h4>通过设置CSS的font-size和color属性可以调整图标大小以及颜色，如下所示：</h4>
+                  <Highlight className="html">
+                    {`<svg class="icon" aria-hidden="true" style="font-size: xx-large;">
+  <use xlink:href="#eiconhome"></use>
+</svg>
+<svg class="icon" aria-hidden="true" style="font-size: medium;color:red">
+  <use xlink:href="#eiconhome"></use>
+</svg>
+<svg class="icon" aria-hidden="true" style="font-size: xx-small;color:blue">
+  <use xlink:href="#eiconhome"></use>
+</svg>`}
+                  </Highlight>
+                  <svg className="icon" aria-hidden="true" style={{fontSize:"xx-large"}}>
+                    <use xlinkHref="#eiconhome"></use>
+                  </svg>
+                  <svg className="icon" aria-hidden="true" style={{fontSize:"medium", color:"red"}}>
+                    <use xlinkHref="#eiconhome"></use>
+                  </svg>
+                  <svg className="icon" aria-hidden="true" style={{fontSize:"xx-small", color:"blue"}}>
+                    <use xlinkHref="#eiconhome"></use>
+                  </svg>
+                </TabPane>
+              </Tabs>
+            </div>
+            {/* <div className="progress" style={{ marginTop: "10px" }}>
               <div
                 className="progress-bar progress-bar-striped bg-warning"
                 role="progressbar"
@@ -333,7 +478,7 @@ function Start() {
             <span className="eicon eiconhome" style={{ fontSize: "xx-large" }} />
             <span className="eicon eiconhome" style={{ fontSize: "medium" }} />
             <span className="eicon eiconhome" style={{ fontSize: "xx-small" }} />
-            <hr />
+            <hr /> */}
           </TabPane>
           <TabPane tab="English" key="2">
             <div className="progress" style={{ marginTop: "10px" }}>
